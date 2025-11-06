@@ -1,21 +1,15 @@
+// Ya no necesitamos ocultar ni mostrar secciones
+// Solo podemos dejar esto vacío o eliminar completamente este script
+
+// Si quieres que al hacer clic en el menú haga scroll suave:
 const links = document.querySelectorAll(".nav-link");
-const sections = document.querySelectorAll(".content-section");
 
-// Mostrar solo la sección inicial (hero) al cargar
-sections.forEach(sec => {
-  if (sec.id !== "hero") sec.style.display = "none";
-});
-
-// Evento de navegación
 links.forEach(link => {
   link.addEventListener("click", e => {
-    e.preventDefault(); // evitar scroll automático
-
-    const target = link.getAttribute("href").substring(1); // quita el #
-
-    sections.forEach(sec => {
-      if (sec.id === target) sec.style.display = "block";
-      else sec.style.display = "none";
+    e.preventDefault();
+    const targetId = link.getAttribute("href");
+    document.querySelector(targetId).scrollIntoView({
+      behavior: "smooth"
     });
   });
 });

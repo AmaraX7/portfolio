@@ -13,15 +13,10 @@ body {
   line-height: 1.6;            /* altura de línea para mejor lectura */
 }
 
-/* HEADER */
 header {
-  background: #8a96da;        /* color de fondo del header */
-  padding: 1rem 2rem;          /* espacio interno */
-  display: flex;               /* organiza contenido en fila */
-  justify-content: space-between; /* separa logo y menú */
-  align-items: center;         /* centra verticalmente los elementos */
-  position: sticky;            /* se queda fijo al hacer scroll */
-  top: 0;                      /* posición superior */
+  display: flex;
+  flex-direction: column; /* los hijos se apilan */
+  align-items: center;    /* centra horizontalmente */
 }
 
 /* MENÚ */
@@ -50,8 +45,8 @@ nav a:hover {
 /* BOTONES */
 .btn {
   display: inline-block;        /* permite padding y ancho */
-  background: #08af40;          /* color de fondo */
-  color: #060606;               /* color del texto */
+  background: #456a9f;          /* color de fondo */
+  color: #d4dee2;               /* color del texto */
   padding: 0.8rem 1.5rem;       /* espacio interno */
   margin-top: 1rem;             /* espacio arriba */
   border-radius: 8px;           /* bordes redondeados */
@@ -59,8 +54,25 @@ nav a:hover {
   transition: 0.3s;             /* animación suave al hover */
 }
 
+/* BOTONES */
+.btn1 {
+  display: inline-block;        /* permite padding y ancho */
+  background: #3b8396;          /* color de fondo */
+  color: #d2d1d1;               /* color del texto */
+  padding: 0.8rem 1.5rem;       /* espacio interno */
+  margin-top: 1rem;             /* espacio arriba */
+  border-radius: 8px;           /* bordes redondeados */
+  text-decoration: none;        /* quita subrayado */
+  transition: 0.3s;             /* animación suave al hover */
+}
+
+
+.btn1:hover {
+  background: #000000;          /* cambio de color al pasar el mouse */
+}
+
 .btn:hover {
-  background: #173b28;          /* cambio de color al pasar el mouse */
+  background: #254f8e;          /* cambio de color al pasar el mouse */
 }
 
 /* SECCIONES GENERALES */
@@ -107,4 +119,11 @@ footer {
   background: #111;              /* fondo oscuro */
   color: #aaa;                   /* texto gris claro */
   font-size: 0.9rem;             /* tamaño de letra más pequeño */
+}
+
+/* Espacio entre párrafos en las secciones de habilidades o proyectos */
+.project p {
+  text-align: justify;
+  text-justify: inter-word; /* distribuye los espacios entre palabras */
+  margin-bottom: 2rem;
 }
