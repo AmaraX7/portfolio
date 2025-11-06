@@ -1,91 +1,110 @@
+/* RESET GENERAL */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  margin: 0;                  /* elimina márgenes por defecto */
+  padding: 0;                 /* elimina padding por defecto */
+  box-sizing: border-box;     /* incluye padding y border en el ancho y alto */
+  font-family: "Poppins", sans-serif; /* tipografía de toda la página */
 }
 
+/* BODY */
 body {
-  background-color: #0e0e0e;
-  color: #f5f5f5;
-  line-height: 1.6;
+  background-color: #e2dbdb;  /* color de fondo general */
+  color: #1d1b1b;             /* color de texto */
+  line-height: 1.6;            /* altura de línea para mejor lectura */
 }
 
+/* HEADER */
 header {
-  background: #111;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
+  background: #8a96da;        /* color de fondo del header */
+  padding: 1rem 2rem;          /* espacio interno */
+  display: flex;               /* organiza contenido en fila */
+  justify-content: space-between; /* separa logo y menú */
+  align-items: center;         /* centra verticalmente los elementos */
+  position: sticky;            /* se queda fijo al hacer scroll */
+  top: 0;                      /* posición superior */
 }
 
+/* MENÚ */
 nav ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
+  display: flex;               /* organiza los enlaces en fila */
+  gap: 1.5rem;                 /* espacio entre enlaces */
+  list-style: none;            /* elimina los puntos de lista */
 }
 
 nav a {
-  color: #f5f5f5;
-  text-decoration: none;
-  transition: color 0.3s;
+  color: #f5f5f5;              /* color del texto del enlace */
+  text-decoration: none;       /* quita subrayado */
+  transition: color 0.3s;      /* transición suave al cambiar color */
 }
 
 nav a:hover {
-  color: #00aaff;
+  color: #00aaff;              /* color al pasar el mouse */
 }
 
+/* HERO / SECCIÓN PRINCIPAL */
 #hero {
-  text-align: center;
-  padding: 5rem 1rem;
+  text-align: center;           /* centra texto e imagen */
+  padding: 5rem 1rem;           /* espacio interno grande arriba/abajo */
 }
 
+/* BOTONES */
 .btn {
-  display: inline-block;
-  background: #00aaff;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  margin-top: 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: 0.3s;
+  display: inline-block;        /* permite padding y ancho */
+  background: #08af40;          /* color de fondo */
+  color: #060606;               /* color del texto */
+  padding: 0.8rem 1.5rem;       /* espacio interno */
+  margin-top: 1rem;             /* espacio arriba */
+  border-radius: 8px;           /* bordes redondeados */
+  text-decoration: none;        /* quita subrayado */
+  transition: 0.3s;             /* animación suave al hover */
 }
 
 .btn:hover {
-  background: #008ecc;
+  background: #173b28;          /* cambio de color al pasar el mouse */
 }
 
+/* SECCIONES GENERALES */
 section {
-  padding: 3rem 2rem;
-  max-width: 900px;
-  margin: auto;
+  padding: 3rem 2rem;           /* espacio interno */
+  max-width: 900px;             /* ancho máximo */
+  margin: auto;                 /* centra horizontalmente */
 }
 
+/* PROYECTOS */
 .project {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
+  padding-top: 3rem;            /* espacio arriba del proyecto */
+  display: flex;                /* imagen y texto en fila */
+  flex-wrap: wrap;              /* baja a otra línea si no cabe */
+  gap: 2rem;                    /* espacio entre imagen y texto */
+  margin-bottom: 2rem;          /* espacio entre proyectos */
+  width: 100%;                  /* ocupa toda la fila */
+  align-items: flex-start;      /* alinea imagen y texto al inicio */
 }
 
 .project img {
-  width: 300px;
-  border-radius: 8px;
+  width: 300px;                 /* tamaño fijo de la imagen */
+  border-radius: 8px;           /* bordes redondeados */
+  flex-shrink: 0;               /* evita que la imagen se encoja */
 }
 
+/* DIV DEL TEXTO DEL PROYECTO */
+.project div {
+  flex: 1;                       /* ocupa el espacio restante junto a la imagen */
+}
+
+/* LISTA DE HABILIDADES */
 .skills-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  display: grid;                 /* organiza en rejilla */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* columnas flexibles */
+  gap: 1rem;                     /* espacio entre items */
+  margin-top: 1rem;              /* espacio arriba de la lista */
 }
 
+/* FOOTER */
 footer {
-  text-align: center;
-  padding: 2rem;
-  background: #111;
-  color: #aaa;
-  font-size: 0.9rem;
+  text-align: center;            /* centra el texto */
+  padding: 2rem;                 /* espacio interno */
+  background: #111;              /* fondo oscuro */
+  color: #aaa;                   /* texto gris claro */
+  font-size: 0.9rem;             /* tamaño de letra más pequeño */
 }
