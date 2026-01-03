@@ -320,7 +320,7 @@ const Portfolio = () => {
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/in/mohamed-amara-el-houiti-09133b345/"
+              href="https://www.linkedin.com/in/mohamed-amara-09133b345/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 px-8 py-4 glass rounded-full font-bold hover:scale-110 transition-transform"
